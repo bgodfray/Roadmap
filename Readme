@@ -1,7 +1,7 @@
 # 🎯 Learning Roadmap
 
-Welcome to my **multi-year professional learning roadmap**, where I document my journey through data, analytics, and AI.  
-Each year builds on the previous one — from foundational business intelligence to advanced machine learning and deployment.
+Welcome to my **multi-year professional learning roadmap**, where I document my continuous journey through data, analytics, and AI.  
+Each year builds on the last — from foundational BI skills to advanced machine learning and deployment.
 
 ---
 
@@ -46,6 +46,6 @@ This repository serves as a **public learning journal** — documenting not just
 
 ## 🛠 Tech Used in this Repo
 
-- Markdown + Shields.io (progress tracking)
-- GitHub Actions *(optional)* for automatic progress % updates
-- LinkedIn integration (for sharing posts and milestones)
+- Markdown + Shields.io (for progress badges)
+- GitHub Actions *(optional)* for automatic progress tracking
+- LinkedIn posts to share learning milestones
