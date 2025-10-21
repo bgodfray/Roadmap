@@ -7,7 +7,7 @@ Each year builds on the last — from foundational BI skills to advanced machine
 
 ## 📆 Yearly Roadmaps
 
-![Progress](https://img.shields.io/badge/Progress-0%25-lightgrey?style=for-the-badge)
+[![Update Progress Badge](https://github.com/bgodfray/Roadmap/actions/workflows/update-progress.yml/badge.svg?branch=main)](https://github.com/bgodfray/Roadmap/actions/workflows/update-progress.yml)
 
 | Year | Focus | Progress | Highlights |
 |------|--------|-----------|-------------|
