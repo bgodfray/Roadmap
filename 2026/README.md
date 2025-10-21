@@ -1,10 +1,10 @@
-# 🧭 2026 Data & AI Learning Roadmap
+# 🧭 2026 Learning Roadmap
 
-**Goal:** Transition from Business Intelligence (Power BI) to Machine Learning (AWS ML Engineer) while building a public analytics portfolio.
+**Goal:** Transition from Business Intelligence (Power BI) to Machine Learning (AWS ML Engineer) while building a professional analytics portfolio.
 
 ---
 
-## 📅 Quarter 1 (Jan – Mar 2026): Foundation & Power BI Focus  
+## 📊 Quarter 1 (Jan – Mar 2026): Foundation & Power BI Focus  
 **Theme:** Strengthen SQL + start Power BI, establish portfolio structure.
 
 - [ ] **January – Roadmap kickoff**
