@@ -1,4 +1,3 @@
-
 name: Update Progress Badge
 
 on:
@@ -22,43 +21,60 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Calculate progress
+      - name: Calculate 2026 progress
         id: progress
         run: |
-          import re, pathlib, os
+          python - <<'EOF'
+          import re
+          from pathlib import Path
+          import os
 
-          files = list(pathlib.Path('.').rglob('README.md'))
-          checked, total = 0, 0
+          # Only track the 2026 roadmap file
+          roadmap_file = Path('2026/README.md')
 
-          for f in files:
-              text = f.read_text(encoding='utf-8')
-              total += len(re.findall(r'- \[.\]', text))
-              checked += len(re.findall(r'- \[x\]', text, re.IGNORECASE))
+          if not roadmap_file.exists():
+              print("File 2026/README.md not found.")
+              percent = 0
+          else:
+              text = roadmap_file.read_text(encoding='utf-8')
+              total = len(re.findall(r'- \[.\]', text))
+              checked = len(re.findall(r'- \[x\]', text, re.IGNORECASE))
+              percent = int((checked / total) * 100) if total else 0
 
-          percent = int((checked / total) * 100) if total else 0
           print(f'Progress: {percent}%')
 
+          # Save to GitHub Actions environment variable
           with open(os.environ['GITHUB_ENV'], 'a') as env:
-              env.write(f'PROGRESS={percent}\n')
+              env.write(f'PROGRESS={percent}\\n')
+          EOF
 
       - name: Update README badge
         run: |
-          import re, os, pathlib
+          python - <<'EOF'
+          import re
+          from pathlib import Path
+          import os
 
-          root_readme = pathlib.Path('README.md')
-          text = root_readme.read_text(encoding='utf-8')
-          new_badge = f"https://img.shields.io/badge/Progress-{os.environ['PROGRESS']}%25-brightgreen?style=for-the-badge"
-          updated = re.sub(
-              r"https://img\.shields\.io/badge/Progress-[0-9]+%25-[^?]+\?style=for-the-badge",
-              new_badge,
-              text
-          )
-          root_readme.write_text(updated, encoding='utf-8')
+          root_readme = Path('README.md')
+          if not root_readme.exists():
+              print("Root README.md not found. Skipping badge update.")
+          else:
+              text = root_readme.read_text(encoding='utf-8')
+              new_badge = f"https://img.shields.io/badge/Progress-{os.environ['PROGRESS']}%25-brightgreen?style=for-the-badge"
+
+              updated = re.sub(
+                  r"https://img\\.shields\\.io/badge/Progress-[0-9]+%25-[^?]+\\?style=for-the-badge",
+                  new_badge,
+                  text
+              )
+
+              root_readme.write_text(updated, encoding='utf-8')
+          EOF
 
       - name: Commit and push badge update
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "Auto-update progress badge to ${PROGRESS}%"
+          git commit -m "Auto-update 2026 roadmap progress to ${PROGRESS}%" || echo "No changes to commit"
           git push
