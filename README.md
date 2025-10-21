@@ -5,20 +5,12 @@ Each year builds on the last — from foundational BI skills to advanced machine
 
 ---
 
-## 📆 Yearly Roadmaps
-
-[![Update Progress Badge](https://github.com/bgodfray/Roadmap/actions/workflows/update-progress.yml/badge.svg?branch=main)](https://github.com/bgodfray/Roadmap/actions/workflows/update-progress.yml)
-
-# Learning Roadmap
-
-![Progress](https://img.shields.io/badge/Progress-45%25-brightgreen)
-
 Roadmap tracking for 2026.
 
 
 | Year | Focus | Progress | Highlights |
 |------|--------|-----------|-------------|
-| [**2026**](./2026/README.md) | BI → AI transition: Power BI, AWS ML Engineer | ![Progress](https://img.shields.io/badge/Progress-0%25-lightgrey?style=for-the-badge) | Power BI dashboards, AWS ML pipeline |
+| [**2026**](./2026/README.md) | BI → AI transition: Power BI, AWS ML Engineer | ![Progress](https://img.shields.io/badge/Progress-45%25-brightgreen) | Power BI dashboards, AWS ML pipeline |
 | [**2027**](./2027/README.md) | TBD – Data Engineering / Azure / MLOps expansion | ⏳ Coming soon | — |
 
 ---
