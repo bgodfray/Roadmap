@@ -8,7 +8,7 @@
 **Theme:** Strengthen SQL + start Power BI, establish portfolio structure.
 
 - [ ] **January – Roadmap kickoff**
-  - [ ] Set up GitHub repo folders (SQL, PowerBI, AI)
+  - [x] Set up GitHub repo folders (SQL, PowerBI, AI)
   - [ ] Audit existing SQL/SSRS work for reusable examples
   - [ ] Identify 2 finance-relevant datasets (Kaggle, data.gov.je, FRED)
   - [ ] ✅ Deliverables: Portfolio skeleton + dataset shortlist
