@@ -1,4 +1,0 @@
-- name: Debug 2026 README
-  run: |
-    ls -R
-    cat 2026/README.md || echo "File not found!"
