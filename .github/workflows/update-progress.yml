@@ -9,17 +9,21 @@ on:
 jobs:
   update-progress:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
+      - name: Debug file structure
+        run: |
+          echo "📁 Listing repository files:"
+          ls -R
+          echo "✅ Checking for 2026/README.md..."
+          if [ -f 2026/README.md ]; then
+            echo "Found 2026/README.md ✅"
+          else
+            echo "⚠️ File not found: 2026/README.md"
+          fi
 
       - name: Calculate 2026 progress
         id: progress
@@ -29,52 +33,38 @@ jobs:
           from pathlib import Path
           import os
 
-          # Only track the 2026 roadmap file
-          roadmap_file = Path('2026/README.md')
+          roadmap_file = Path("2026/README.md")
 
           if not roadmap_file.exists():
-              print("File 2026/README.md not found.")
+              print("⚠️ File 2026/README.md not found. Setting progress to 0%.")
               percent = 0
           else:
-              text = roadmap_file.read_text(encoding='utf-8')
-              total = len(re.findall(r'- \[.\]', text))
-              checked = len(re.findall(r'- \[x\]', text, re.IGNORECASE))
+              text = roadmap_file.read_text(encoding="utf-8")
+              checkboxes = re.findall(r"- \[[ xX]\]", text)
+              checked = len(re.findall(r"- \[[xX]\]", text))
+              total = len(checkboxes)
               percent = int((checked / total) * 100) if total else 0
 
-          print(f'Progress: {percent}%')
+          print(f"📊 Progress: {percent}%")
 
-          # Save to GitHub Actions environment variable
-          with open(os.environ['GITHUB_ENV'], 'a') as env:
-              env.write(f'PROGRESS={percent}\\n')
+          with open(os.environ["GITHUB_ENV"], "a") as env:
+              env.write(f"PROGRESS={percent}\n")
           EOF
 
-      - name: Update README badge
+      - name: Update progress badge in root README
         run: |
-          python - <<'EOF'
-          import re
-          from pathlib import Path
-          import os
+          BADGE="![Progress](https://img.shields.io/badge/Progress-${PROGRESS}%25-brightgreen)"
+          echo "🔄 Updating progress badge in README.md"
+          if grep -q "!\[Progress\]" README.md; then
+            sed -i "s|!\[Progress\](.*)|${BADGE}|" README.md
+          else
+            echo -e "\n${BADGE}" >> README.md
+          fi
 
-          root_readme = Path('README.md')
-          if not root_readme.exists():
-              print("Root README.md not found. Skipping badge update.")
-          else:
-              text = root_readme.read_text(encoding='utf-8')
-              new_badge = f"https://img.shields.io/badge/Progress-{os.environ['PROGRESS']}%25-brightgreen?style=for-the-badge"
-
-              updated = re.sub(
-                  r"https://img\\.shields\\.io/badge/Progress-[0-9]+%25-[^?]+\\?style=for-the-badge",
-                  new_badge,
-                  text
-              )
-
-              root_readme.write_text(updated, encoding='utf-8')
-          EOF
-
-      - name: Commit and push badge update
+      - name: Commit and push changes
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "Auto-update 2026 roadmap progress to ${PROGRESS}%" || echo "No changes to commit"
+          git commit -m "🧭 Update progress badge to ${PROGRESS}% [skip ci]" || echo "No changes to commit"
           git push
