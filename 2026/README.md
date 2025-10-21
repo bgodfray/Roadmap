@@ -7,17 +7,17 @@
 ## 📊 Quarter 1 (Jan – Mar 2026): Foundation & Power BI Focus  
 **Theme:** Strengthen SQL + start Power BI, establish portfolio structure.
 
-- [ ] **January – Roadmap kickoff**
+- [x] **January – Roadmap kickoff**
   - [x] Set up GitHub repo folders (SQL, PowerBI, AI)
-  - [ ] Audit existing SQL/SSRS work for reusable examples
-  - [ ] Identify 2 finance-relevant datasets (Kaggle, data.gov.je, FRED)
-  - [ ] ✅ Deliverables: Portfolio skeleton + dataset shortlist
+  - [x] Audit existing SQL/SSRS work for reusable examples
+  - [x] Identify 2 finance-relevant datasets (Kaggle, data.gov.je, FRED)
+  - [x] ✅ Deliverables: Portfolio skeleton + dataset shortlist
 
-- [ ] **February – Power BI fundamentals**
-  - [ ] Start *Microsoft Power BI Data Analyst (PL-300)* on Microsoft Learn
-  - [ ] Re-build one SSRS report in Power BI
-  - [ ] Learn Power Query + DAX basics
-  - [ ] ✅ Deliverable: Mini-project #1 “Finance KPI Dashboard”
+- [x] **February – Power BI fundamentals**
+  - [x] Start *Microsoft Power BI Data Analyst (PL-300)* on Microsoft Learn
+  - [x] Re-build one SSRS report in Power BI
+  - [x] Learn Power Query + DAX basics
+  - [x] ✅ Deliverable: Mini-project #1 “Finance KPI Dashboard”
 
 - [ ] **March – Data storytelling**
   - [ ] Add slicers, drill-throughs, visuals
