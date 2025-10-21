@@ -20,7 +20,7 @@
 
 # \### Tasks
 
-# \- \[ ] Create GitHub repo folders: `SQL`, `PowerBI`, `AI`
+# \- \[x] Create GitHub repo folders: `SQL`, `PowerBI`, `AI`
 
 # \- \[ ] Audit existing SQL/SSRS work for reusable examples
 
