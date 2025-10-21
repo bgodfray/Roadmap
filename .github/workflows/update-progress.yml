@@ -1,0 +1,64 @@
+
+name: Update Progress Badge
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  update-progress:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Calculate progress
+        id: progress
+        run: |
+          import re, pathlib, os
+
+          files = list(pathlib.Path('.').rglob('README.md'))
+          checked, total = 0, 0
+
+          for f in files:
+              text = f.read_text(encoding='utf-8')
+              total += len(re.findall(r'- \[.\]', text))
+              checked += len(re.findall(r'- \[x\]', text, re.IGNORECASE))
+
+          percent = int((checked / total) * 100) if total else 0
+          print(f'Progress: {percent}%')
+
+          with open(os.environ['GITHUB_ENV'], 'a') as env:
+              env.write(f'PROGRESS={percent}\n')
+
+      - name: Update README badge
+        run: |
+          import re, os, pathlib
+
+          root_readme = pathlib.Path('README.md')
+          text = root_readme.read_text(encoding='utf-8')
+          new_badge = f"https://img.shields.io/badge/Progress-{os.environ['PROGRESS']}%25-brightgreen?style=for-the-badge"
+          updated = re.sub(
+              r"https://img\.shields\.io/badge/Progress-[0-9]+%25-[^?]+\?style=for-the-badge",
+              new_badge,
+              text
+          )
+          root_readme.write_text(updated, encoding='utf-8')
+
+      - name: Commit and push badge update
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Auto-update progress badge to ${PROGRESS}%"
+          git push
