@@ -7,6 +7,9 @@ Each year builds on the last — from foundational BI skills to advanced machine
 
 ## 📆 Yearly Roadmaps
 
+![Progress](https://img.shields.io/badge/Progress-0%25-lightgrey?style=for-the-badge)
+
+
 | Year | Focus | Progress | Highlights |
 |------|--------|-----------|-------------|
 | [**2026**](./2026/README.md) | BI → AI transition: Power BI, AWS ML Engineer | ![Progress](https://img.shields.io/badge/Progress-0%25-lightgrey?style=for-the-badge) | Power BI dashboards, AWS ML pipeline |
