@@ -10,7 +10,7 @@ Roadmap tracking for 2026.
 
 | Year | Focus | Progress | Highlights |
 |------|--------|-----------|-------------|
-| [**2026**](./2026/README.md) | BI → AI transition: Power BI, AWS ML Engineer | ![Progress](https://img.shields.io/badge/Progress-45%25-brightgreen) | Power BI dashboards, AWS ML pipeline |
+| [**2026**](./2026/README.md) | BI → AI transition: Power BI, AWS ML Engineer | ![Progress](https://img.shields.io/badge/Progress-0%25-brightgreen) | Power BI dashboards, AWS ML pipeline |
 | [**2027**](./2027/README.md) | TBD – Data Engineering / Azure / MLOps expansion | ⏳ Coming soon | — |
 
 ---
