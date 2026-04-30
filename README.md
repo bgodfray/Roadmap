@@ -3,6 +3,8 @@
 Welcome to my **multi-year professional learning roadmap**, where I document my continuous journey through data, analytics, and AI.  
 Each year builds on the last — from foundational BI skills to advanced machine learning and deployment.
 
+
+Notes - look at https://github.com/mrdbourke/zero-to-mastery-ml
 ---
 
 Roadmap tracking for 2026.
