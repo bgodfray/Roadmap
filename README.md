@@ -1,54 +1,54 @@
-# 🎯 Learning Roadmap
+# 🎯 Learning Roadmap: Management, Data, Analytics & AI
 
-Welcome to my **multi-year professional learning roadmap**, where I document my continuous journey through data, analytics, and AI.  
-Each year builds on the last — from foundational BI skills to advanced machine learning and deployment.
+Welcome to my multi-year professional learning roadmap. This repository serves as a public learning journal documenting my continuous journey through enterprise management, data analytics, and artificial intelligence. 
 
-
-Notes - look at https://github.com/mrdbourke/zero-to-mastery-ml
----
-
-Roadmap tracking for 2026.
-
-
-| Year | Focus | Progress | Highlights |
-|------|--------|-----------|-------------|
-| [**2026**](./2026/README.md) | BI → AI transition: Power BI, AWS ML Engineer | Power BI dashboards, AWS ML pipeline |
-| [**2027**](./2027/README.md) | TBD – Data Engineering / Azure / MLOps expansion | — |
+Each year builds sequentially on the last—from operational leadership and foundational BI skills to advanced machine learning deployment and MLOps.
 
 ---
 
-## 🧩 Skills Overview
+## 🗺️ Roadmap Tracking
 
-| Domain | Tools & Skills |
-|--------|----------------|
+| Year | Primary Focus | Progress | Key Highlights |
+| :--- | :--- | :--- | :--- |
+| [**2026**](./2026/README.md) | Operational Management & Cloud Foundations | 🟩🟩🟩⬜⬜ In Progress | Advancing leadership frameworks via CMI Level 5; establishing enterprise cloud architecture literacy. |
+| [**2027**](./2027/README.md) | The BI → AI Transition | ⬜⬜⬜⬜⬜ Planned | Mastering cloud-native data pipelines; deploying end-to-end predictive models. |
+
+---
+
+---
+
+## 🧩 Skills & Technology Matrix
+
+| Domain | Tools & Technologies |
+| :--- | :--- |
 | **Data Analytics** | Power BI, SQL, DAX, Power Query |
 | **Machine Learning** | AWS SageMaker, XGBoost, Pandas, NumPy |
-| **Automation** | Power Automate, Python scripting |
-| **Visualization & Storytelling** | Dashboard design, data narratives |
-| **Cloud & MLOps** | AWS Glue, Athena, IAM, API Gateway |
+| **Automation & Scripting** | Power Automate, Python |
+| **Visualization & Storytelling** | Dashboard design, Executive Data Narratives, KPI modeling |
+| **Cloud & MLOps** | AWS (S3, Athena, IAM, API Gateway), Cloud Security |
 
 ---
 
 ## 🏆 Certifications Timeline
 
 | Year | Certification | Status |
-|------|----------------|---------|
-| 2026 | Power BI Data Analyst (PL-300) | ⏳ In progress |
-| 2026 | AWS Machine Learning Engineer – Associate | ⏳ In progress |
-| 2027 | Azure Data Scientist Associate *(planned)* | 🗓 Planned |
+| :--- | :--- | :--- |
+| **2026** | CMI Level 5 Management and Leadership | ⏳ In Progress |
+| **2026** | Chartered Manager Status | ⏳ In Progress |
+| **2026** | AWS Certified Cloud Practitioner (CLF-C02) | 🎯 Target: Dec 2026 |
+| **2027** | Microsoft Certified: Power BI Data Analyst (PL-300) | 🎯 Target: Mar 2027 |
+| **2027** | AWS Certified Machine Learning Engineer – Associate | 🎯 Target: Nov 2027 |
 
 ---
 
-## 🧭 Vision
+## 🔭 Vision
 
-> “Continuous learning is the real career insurance.”
-
-This repository serves as a **public learning journal** — documenting not just achievements, but growth, reflection, and curiosity.
+This repository is more than a list of completed courses. It is a live documentation of growth, reflection, and curiosity. Here, coursework is translated into production-grade projects that solve real business problems.
 
 ---
 
-## 🛠 Tech Used in this Repo
+## 🛠 Tech Used to Build This Repo
 
-- Markdown + Shields.io (for progress badges)
-- GitHub Actions *(optional)* for automatic progress tracking
-- LinkedIn posts to share learning milestones
+*   **Markdown & HTML:** For structured, readable documentation.
+*   **Shields.io:** For dynamic progress tracking and certification badges.
+*   **LinkedIn:** For sharing learning milestones and building in public.
