@@ -1,49 +1,21 @@
-# 📊 Enterprise Operations & Cloud Analytics Engine
+## 🗓️ 2026 Execution Plan: Management & Cloud Foundations
 
-This repository hosts an end-to-end data pipeline and executive dashboard tracking enterprise operational efficiency and maintenance forecasting. Built using **AWS Cloud Infrastructure** and **Power BI**.
+To ensure high-quality output across both leadership development and technical engineering, this year utilizes a **"Toggle Strategy."** 
 
----
+By alternating between intensive CMI management coursework and focused AWS engineering sprints, I maintain momentum without compromising the production-grade quality of my technical portfolio. 
 
-## 🎯 Project Overview
-Operations teams often struggle with fragmented data across isolated systems. This project centralizes raw asset logs into an AWS data lake, executes serverless SQL transformations, and delivers dynamic cost-forecasting analytics via Power BI.
+### Q3 / Q4 Schedule
 
-## 🛠️ Architecture
-`Raw Data (CSV)` ➡️ `AWS S3 (Data Lake)` ➡️ `AWS Athena (SQL Engine)` ➡️ `Power BI (DAX / Data Model)`
-
----
-
-## 🗓️ Sprint Tracker (Oct – Dec 2026)
-
-- [ ] **Sprint 1: Cloud & Repo Foundation**
-  - [ ] Set up AWS IAM, S3 Buckets, and Billing Alarms.
-  - [ ] Initialize GitHub repository and commit structure.
-  - [ ] Complete AWS Cloud Practitioner Core Modules.
-
-- [ ] **Sprint 2: Data Ingestion & SQL Querying**
-  - [ ] Upload asset telemetry datasets to AWS S3.
-  - [ ] Query raw data using AWS Athena serverless SQL.
-  - [ ] Complete AWS Storage & Database Exam Modules.
-
-- [ ] **Sprint 3: Business Intelligence & Power BI**
-  - [ ] Connect Power BI to AWS via ODBC/Native Connectors.
-  - [ ] Design Star-Schema Data Model (Fact Maintenance, Dim Assets, Dim Date).
-  - [ ] Implement DAX measures for Cost Drift and Downtime Risk.
-
-- [ ] **Sprint 4: Exam Prep & Documentation**
-  - [ ] Complete 5x AWS Practice Exams (Target: 85%+).
-  - [ ] Add Architecture Diagram and Executive Summary to README.
-  - [ ] Conduct final code review for clean, modular formatting.
-
-- [ ] **Sprint 5: Certification**
-  - [ ] Sit AWS Certified Cloud Practitioner Exam (CLF-C02).
-  - [ ] Attach AWS Digital Badge to repository.
+| Date Phase | Focus Area | Deliverables & Milestones |
+| :--- | :--- | :--- |
+| **Sep 14 – Oct 5** | CMI Unit 509 | Complete 3-week management coursework. *(Passive AWS Domain 1 review).* |
+| **Oct 6 – Oct 18** | AWS Sprint 1 | Provision AWS IAM security; construct S3 Data Lake; ingest raw operational CSV data. |
+| **Oct 19 – Nov 9** | CMI Unit 520 | Complete 3-week management coursework. *(Passive AWS Domain 2 review).* |
+| **Nov 10 – Nov 29** | AWS Sprint 2 & 3 | Connect AWS Athena; execute serverless SQL transformations; build Power BI star schema and executive dashboard. |
+| **Nov 30 – Dec 21** | CMI Unit 608 | Complete 3-week management coursework. *(Execute weekly AWS mock exams).* |
+| **Late Dec / Jan '27** | Certification | Sit **AWS Certified Cloud Practitioner** exam. Publish completed pipeline repository. |
 
 ---
 
-## 📋 Recruiter & Production Checklist
-
-- [x] **Clear Business Impact:** Solves operational downtime and cost overruns.
-- [ ] **Architecture Diagram:** Included in `/docs` folder.
-- [ ] **Data Security:** IAM policies restricted (no public S3 exposure).
-- [ ] **Reproducibility:** Step-by-step setup guide provided below.
-- [ ] **Executive Dashboard:** Live Power BI screenshots and interactive link.
+### 💡 Portfolio Strategy Note
+This schedule intentionally limits context-switching. Treating the AWS pipeline as a modular, agile build spaced around hard business deadlines replicates the reality of delivering enterprise data solutions while managing team operations.
