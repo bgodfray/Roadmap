@@ -34,8 +34,8 @@ Each year builds sequentially on the last—from operational leadership and foun
 | Year | Certification | Status |
 | :--- | :--- | :--- |
 | **2026** | CMI Level 5 Management and Leadership | ⏳ In Progress |
-| **2026** | Chartered Manager Status | ⏳ In Progress |
 | **2026** | AWS Certified Cloud Practitioner (CLF-C02) | 🎯 Target: Dec 2026 |
+| **2027** | Chartered Manager Status | Target: Jan/Feb 2027 |
 | **2027** | Microsoft Certified: Power BI Data Analyst (PL-300) | 🎯 Target: Mar 2027 |
 | **2027** | AWS Certified Machine Learning Engineer – Associate | 🎯 Target: Nov 2027 |
 
