@@ -26,3 +26,5 @@ Translating raw data into actionable capacity metrics required strict business l
 
 ## 🚀 Next Steps (Phase 2 - Late 2027)
 This repository establishes the foundational data infrastructure. Phase 2 will utilize this cleaned dataset to train a predictive machine learning model (AWS SageMaker / XGBoost) to predict customer buying behavior and proactive upgrade targeting.
+
+## Task
