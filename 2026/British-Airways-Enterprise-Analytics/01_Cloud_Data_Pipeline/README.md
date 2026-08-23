@@ -55,8 +55,9 @@ WITH SERDEPROPERTIES (
 STORED AS TEXTFILE
 LOCATION 's3://ba-tasks-bg/raw_data/'
 TBLPROPERTIES ('skip.header.line.count'='1');
-``` </details>
 ```
+</details>
+
 ## 🗂️ Repository Structure
 *   📄 **[business_requirements.md](./business_requirements.md):** The original business prompt, scope, and scenario constraints.
 *   📄 `athena_eligibility_lookup.sql`: The core SQL script executing the business logic to determine lounge access.
