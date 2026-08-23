@@ -13,7 +13,7 @@ This pipeline utilizes a serverless AWS architecture to minimize compute costs w
 ## Raw Flight/Passenger Data (CSV)
 Copy of the task file from BA on Forage -> [file](https://github.com/bgodfray/LearningRoadmap/blob/main/2026/British-Airways-Enterprise-Analytics/01_Cloud_Data_Pipeline/British%20Airways%20Summer%20Schedule%20Dataset%20-%20Forage%20Data%20Science%20Task%201.xlsx) 
 
-File changed to CVS -> [file](https://github.com/bgodfray/LearningRoadmap/blob/main/2026/British-Airways-Enterprise-Analytics/01_Cloud_Data_Pipeline/ba_summer_schedule.csv)
+File changed to CSV -> [file](https://github.com/bgodfray/LearningRoadmap/blob/main/2026/British-Airways-Enterprise-Analytics/01_Cloud_Data_Pipeline/ba_summer_schedule.csv)
 
 ## 🛠️ Infrastructure & Data Ingestion (AWS S3 & Athena)
 
@@ -22,9 +22,6 @@ To ensure a production-grade schema-on-read architecture, the raw data ingestion
 1. **Storage (AWS S3):** Raw CSV schedules were ingested into a secure S3 bucket, isolated within a dedicated `raw_data/` directory to prevent Athena from recursively scanning its own output metadata.
 2. **Schema Definition (AWS Athena):** The table was instantiated using an external DDL script. 
 3. **Data Quality Handling:** The raw CSV extract contained inconsistent double-quote formatting. Rather than cleaning this manually in Python or Excel, I implemented the `OpenCSVSerde` within the table properties to dynamically strip quotes and escape characters during the read process, ensuring clean downstream aggregations.
-
-<details>
-<summary><b>Click to view the DDL (Create Table) Script</b></summary>
 
 <details>
 <summary><b>Click to view the DDL (Create Table) Script</b></summary>
@@ -58,7 +55,8 @@ WITH SERDEPROPERTIES (
 STORED AS TEXTFILE
 LOCATION 's3://ba-tasks-bg/raw_data/'
 TBLPROPERTIES ('skip.header.line.count'='1');
-
+``` </details>
+```
 ## 🗂️ Repository Structure
 *   📄 **[business_requirements.md](./business_requirements.md):** The original business prompt, scope, and scenario constraints.
 *   📄 `athena_eligibility_lookup.sql`: The core SQL script executing the business logic to determine lounge access.
