@@ -11,7 +11,8 @@ This project solves this capacity planning challenge by building a scalable, clo
 This pipeline utilizes a serverless AWS architecture to minimize compute costs while maintaining enterprise-grade security and scalability.
 
 ## Raw Flight/Passenger Data (CSV)
-Copy of the task file from BA -> https://github.com/bgodfray/LearningRoadmap/blob/main/2026/British-Airways-Enterprise-Analytics/01_Cloud_Data_Pipeline/British%20Airways%20Summer%20Schedule%20Dataset%20-%20Forage%20Data%20Science%20Task%201.xlsx
+Copy of the task file from BA on Forage -> [file](https://github.com/bgodfray/LearningRoadmap/blob/main/2026/British-Airways-Enterprise-Analytics/01_Cloud_Data_Pipeline/British%20Airways%20Summer%20Schedule%20Dataset%20-%20Forage%20Data%20Science%20Task%201.xlsx) 
+File changed to CVS -> [file](https://github.com/bgodfray/LearningRoadmap/blob/main/2026/British-Airways-Enterprise-Analytics/01_Cloud_Data_Pipeline/ba_summer_schedule.csv)
 
 ## 🛠️ Infrastructure & Data Ingestion (AWS S3 & Athena)
 
