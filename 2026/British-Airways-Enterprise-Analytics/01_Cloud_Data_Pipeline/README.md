@@ -26,6 +26,9 @@ To ensure a production-grade schema-on-read architecture, the raw data ingestion
 <details>
 <summary><b>Click to view the DDL (Create Table) Script</b></summary>
 
+<details>
+<summary><b>Click to view the DDL (Create Table) Script</b></summary>
+
 ```sql
 CREATE EXTERNAL TABLE IF NOT EXISTS ba_summer_schedule (
   `FLIGHT_DATE` string,
@@ -55,8 +58,7 @@ WITH SERDEPROPERTIES (
 STORED AS TEXTFILE
 LOCATION 's3://ba-tasks-bg/raw_data/'
 TBLPROPERTIES ('skip.header.line.count'='1');
-``` </details>
-```
+
 ## 🗂️ Repository Structure
 *   📄 **[business_requirements.md](./business_requirements.md):** The original business prompt, scope, and scenario constraints.
 *   📄 `athena_eligibility_lookup.sql`: The core SQL script executing the business logic to determine lounge access.
