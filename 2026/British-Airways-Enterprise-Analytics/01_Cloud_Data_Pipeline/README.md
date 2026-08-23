@@ -55,6 +55,7 @@ WITH SERDEPROPERTIES (
 STORED AS TEXTFILE
 LOCATION 's3://ba-tasks-bg/raw_data/'
 TBLPROPERTIES ('skip.header.line.count'='1');
+``` </details>
 ```
 ## 🗂️ Repository Structure
 *   📄 **[business_requirements.md](./business_requirements.md):** The original business prompt, scope, and scenario constraints.
