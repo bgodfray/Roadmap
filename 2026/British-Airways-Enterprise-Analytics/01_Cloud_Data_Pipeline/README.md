@@ -16,7 +16,7 @@ This pipeline utilizes a serverless AWS architecture to minimize compute costs w
 *   📄 **[business_requirements.md](./business_requirements.md):** The original business prompt, scope, and scenario constraints.
 *   📄 `athena_eligibility_lookup.sql`: The core SQL script executing the business logic to determine lounge access.
 *   📊 `BA_Lounge_Capacity_Forecast.pbix`: The Power BI dashboard containing the semantic data model and executive visualizations.
-*   📝 `data_dictionary_and_assumptions.md`: Documentation of the transit time assumptions and data quality checks applied.
+*   📝 **data_dictionary_and_assumptions.md(./data_dictionary_and_assumptions.md):** Documentation of the transit time assumptions and data quality checks applied.
 *   🖼️ `/docs/architecture_diagram.png`: Visual map of the AWS infrastructure.
 *   
 ## 🧠 Business Logic & Assumptions applied
